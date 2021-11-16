@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Snacks List</h2>
+   <p id="readmore">Click on any post to read more</p>
+  <section id="container">
+    {% for post in object_list %}
+    <!-- {{post.pk}} -->
+         <a href='{% url "detail" post.pk %}'>
+           <div class="post">
+            {{ post.title }}
+
+        </div>
+    </a>
+    {% endfor %}
+  </section>
+  <br>
+    <br>
+    <br>
+
+  <a href="{% url 'create' %}">Create New </a>     {% comment %} to able to go to create new page from the home page    {% endcomment %}
+
+{% endblock content %}

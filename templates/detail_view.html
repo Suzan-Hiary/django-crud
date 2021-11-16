@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Snacks Details</h2>
+  <div id="one_post"> 
+
+
+     <h2 id="purchaser">{{ snack.purchaser }}</h2> 
+     <div class="in_detail">
+        <h2>{{snack.title}}</h2>
+        <P>{{ snack.description }}</P>
+            </div>
+
+
+    <a href="{% url 'update' snack.pk %}">Update</a> {% comment %} here we add linkable button to able to make update in detail page,then redirect to same page {% endcomment %}
+    <a href="{% url 'delete' snack.pk %}">Delete</a> {% comment %}here we add this line to able to make deletion from details page, then redirect to homepage{% endcomment %}
+    <a href="{% url 'snacks' %}">Back to home page </a> 
+
+     </div>
+
+{% endblock content %}
