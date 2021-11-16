@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Create New Snacks</h2>
+  <div id="one_post">
+
+
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <input type="submit" value="SAVE">
+  </form>
+  </div>
+
+{% endblock content %}
